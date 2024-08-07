@@ -1,13 +1,13 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Home from 'src/components/Home';
-import About from 'src/components/About';
-import DisplayAllItems from 'src/components/DisplayAllItems';
-import AddNewItem from 'src/components/AddNewItem';
-import UpdateItem from 'src/components/UpdateItem';
-import Contact from 'src/components/Contact';
-import 'src/App.css'; // Import the CSS file
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import DisplayAllItems from './components/DisplayAllItems';
+import AddNewItem from './components/AddNewItem';
+import UpdateItem from './components/UpdateItem';
+import Contact from './components/Contact';
+import './App.css'; // Import the CSS file
 
 const App = () => {
   return (
@@ -35,14 +35,14 @@ const App = () => {
           </div>
         </nav>
         <div className="container mt-3">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/items" component={DisplayAllItems} />
-            <Route path="/add" component={AddNewItem} />
-            <Route path="/update/:id" component={UpdateItem} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/items" element={<DisplayAllItems />} />
+            <Route path="/add" element={<AddNewItem />} />
+            <Route path="/update/:id" element={<UpdateItem />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </div>
       </Router>
   );
