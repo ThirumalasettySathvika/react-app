@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Margherita",
+      "price": 5.99
+    },
+    {
+      "id": 2,
+      "name": "Pepperoni",
+      "price": 7.99
+    }
+  ]
+}
